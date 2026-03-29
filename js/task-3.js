@@ -20,8 +20,8 @@ class StringBuilder {
   padBoth(str) {
     this.#value = [
       ...str.split(''),
-      ...this.#value.split(),
-      str.split(''),
+      ...this.#value.split(''),
+      ...str.split(''),
     ].join('');
   }
 }
@@ -32,5 +32,5 @@ builder.padStart('^');
 console.log(builder.getValue()); // "^."
 builder.padEnd('^');
 console.log(builder.getValue()); // "^.^"
-builder.padBoth('=');
+builder.padBoth('==');
 console.log(builder.getValue()); // "=^.^="
